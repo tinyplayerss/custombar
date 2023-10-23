@@ -1,0 +1,144 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2B2735;
+  color: #D6D1E1;
+}
+
+header {
+  background-color: #1C1923;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #E94A64;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #D6D1E1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #E94A64;
+}
+
+section {
+  padding: 50px;
+  background-color: #121016;
+  border-radius: 10px;
+  margin: 20px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+section h1, section h2 {
+  color: #E94A64;
+  margin-bottom: 20px;
+}
+
+section p {
+  color: #D6D1E1;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.custombar-embed {
+  display: flex;
+  scale: 0.9;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #1C1923;
+  color: #D6D1E1;
+}
+
+form textarea {
+  height: 150px;
+}
+
+form button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  background-color: #E94A64;
+  color: #D6D1E1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #1C1923;
+}
+
+footer {
+  background-color: #1C1923;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  color: #D6D1E1;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #E94A64;
+  color: #D6D1E1;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #1C1923;
+}

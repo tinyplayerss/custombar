@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="custombar.css">
+</head>
+<body>
+  <div class="progress-container">
+    <h2 id="goal-title">Goal</h2>
+    <div class="progress-bar">
+      <span class="progress-label progress-label-start" id="label-start">0</span>
+      <div class="progress-fill"></div>
+      <span class="progress-label progress-label-end" id="label-end">100</span>
+    </div>
+    <div class="divider"></div>
+    <div class="controls">
+      <table class="controls-table">
+        <tr>
+          <td>
+            <div class="progress-controls">
+              <h3>Your Current Followers</h3>
+              <input type="number" id="progress-input" min="0" max="100" value="0" class="control-input">
+            </div>
+          </td>
+          <td>
+            <button id="decrement" class="control-button">-</button>
+            <button id="increment" class="control-button">+</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="goal-controls">
+              <h3>Your Future Goal</h3>
+              <input type="number" id="goal-input" min="0" value="100" class="control-input">
+            </div>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="title-controls">
+              <h3>Title Above Bar</h3>
+              <input type="text" id="update-title-input" placeholder="New Title" class="control-input">
+            </div>
+          </td>
+          <td>
+            <button id="update-title-button" class="control-button">Update</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="labels-controls">
+              <h3>Labels 0 - 100 That Simple</h3>
+              <input type="text" id="label-start-input" placeholder="Start Label" class="control-input">
+              <input type="text" id="label-end-input" placeholder="End Label" class="control-input">
+            </div>
+          </td>
+          <td>
+            <button id="update-labels-button" class="control-button">Update</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="save-load-controls">
+              <h3>Save & Load</h3>
+              <input type="file" id="load-values-input" accept=".json" class="control-input">
+            </div>
+          </td>
+          <td>
+            <button id="save-values-button" class="control-button">Save</button>
+            <button id="load-values-button" class="control-button">Load</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script src="custombar.js"></script>
+</body>
+</html>
