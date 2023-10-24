@@ -1,3 +1,9 @@
+/* Hide the scrollbar in WebKit browsers */
+::-webkit-scrollbar {
+  color: white;
+  border-radius: 5px;
+}
+
 /* Reset some default styles */
 * {
   margin: 0;
