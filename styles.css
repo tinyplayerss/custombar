@@ -1,11 +1,12 @@
 /* Customize the WebKit scrollbar */
 ::-webkit-scrollbar {
-  width: 8px; /* Set the width of the scrollbar */
+  width: 13px; /* Set the width of the scrollbar */
+  box-shadow: 0px 0px 20px black;
 }
 
 /* Track (the area behind the thumb) */
 ::-webkit-scrollbar-track {
-  background-color: #ff005912; /* Set the background color */
+  background-color: #77002a71; /* Set the background color */
 }
 
 /* Thumb (the draggable scrolling element) */
@@ -18,8 +19,6 @@
 /* On hover, the thumb will have a different color */
 ::-webkit-scrollbar-thumb:hover {
   background-color: #ef0064;
-  box-shadow: 0px 0px 10px 5px #ef0064;
-  width: 12px;
 }
 
 /* Reset some default styles */
@@ -55,6 +54,11 @@ nav {
   font-size: 24px;
   font-weight: bold;
   color: #E94A64;
+}
+
+.highlight-free {
+  color: #E94A64;
+  font-weight: bold;
 }
 
 nav ul {
