@@ -82,7 +82,8 @@ ul {
 .custombar-embed {
   display: flex;
   scale: 0.7;
-  max-width: 1000px;
+  max-width: 600px;
+  max-height: 800px;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
