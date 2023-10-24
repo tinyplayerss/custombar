@@ -22,7 +22,25 @@ function updateProgressBar(value) {
   progressInput.value = newValue;
   labelStart.textContent = '0'; // Reset to 0
   labelEnd.textContent = '100'; // Reset to 100
+
+  if (newValue === parseInt(goalInput.value)) {
+    // Change the color to gold when the progress reaches the goal
+    progressBar.style.background = 'gold';
+    // Add a glowing effect when filled and gold
+    progressBar.style.boxShadow = '0 0 30px 5px gold';
+    // Change text color of labels to black when value is max
+    labelStart.style.color = 'black';
+    labelEnd.style.color = 'black';
+  } else {
+    // Reset the color and glow
+    progressBar.style.background = '';
+    progressBar.style.boxShadow = '';
+    // Reset the text color of labels
+    labelStart.style.color = 'white';
+    labelEnd.style.color = 'white';
+  }
 }
+
 // Event listener for the increment button
 incrementButton.addEventListener('click', () => {
   updateProgressBar(parseInt(progressInput.value) + 1);
