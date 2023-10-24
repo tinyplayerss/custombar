@@ -1,7 +1,25 @@
-/* Hide the scrollbar in WebKit browsers */
+/* Customize the WebKit scrollbar */
 ::-webkit-scrollbar {
-  color: white;
-  border-radius: 5px;
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+/* Track (the area behind the thumb) */
+::-webkit-scrollbar-track {
+  background-color: #ff005912; /* Set the background color */
+}
+
+/* Thumb (the draggable scrolling element) */
+::-webkit-scrollbar-thumb {
+  background-color: #df2264; /* Set the thumb color */
+  border-radius: 6px; /* Rounded corners for the thumb */
+  transition: box-shadow 0.3s ease, width 0.3s ease;
+}
+
+/* On hover, the thumb will have a different color */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ef0064;
+  box-shadow: 0px 0px 10px 5px #ef0064;
+  width: 12px;
 }
 
 /* Reset some default styles */
