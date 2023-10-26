@@ -1,0 +1,21 @@
+input[type="number"],
+input[type="text"] {
+    background-color: #ddd;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    width: 100px;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    background-color: #eee;
+}
+
+textarea {
+    background-color: #ddd;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}

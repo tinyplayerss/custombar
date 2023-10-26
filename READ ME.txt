@@ -1,0 +1,45 @@
+# CustomBAR - User Guide
+
+# Introduction
+
+CustomBAR is a versatile browser source tool for OBS Studio. It allows you to create customized progress bars with ease. This guide will walk you through the steps to configure and use CustomBAR effectively.
+
+
+
+# Instructions on how to use CustomBAR.
+
+- First Configure the Tool on the Browser to create a .json file for the Values so you dont have to set it at that value all the time.
+
+- Second use the Browser Source in OBS Studio and Select Local File and then Locate the index.html file within the CustomBAR Folder.
+
+- Leave both or one of the Start Label & End Label Blank or have both Blank to hide the Labels example 0 - 100.
+
+- Step 1: Set your Future Goal First before setting your Current Followers.
+
+- Step 2: Set your Current Followers for example 50 < Current Followers, 100 < Your Goal.
+
+- Step 3: Set your Title Above Bar thats the Main Title Example Donations, Follower Goal, Subscriber Goal.
+
+- Step 4: You can also use Shymbols in your Start & End Labels example "$ # & ^ @ !"
+
+
+
+# Want to Contribute to the Project Feel Free to Modify and make CustomBAR your Own! make sure to Tag the author @tinyplayerss if your using the Tool for Rumble Streams!.
+
+# The tool is Free to use Doesnt Require any Purcahsing or Subscribing to Subscriptions, My Goal is to Keep it Free for everyone to use!
+
+# Support This Project
+
+If you find this project helpful and would like to support its development, you can make a donation using the link below:
+
+( https://paypal.me/2players1Gamer ) < this is my old username but you would see my Primary Icon i Use everywhere!
+
+Your contributions help to maintain and improve this project. Thank you for your support!
+
+# Authors Socials:
+
+https://tinyplayerss.github.io/tinylinkss
+
+https://rumble.com/tinyplayerss
+
+Discord: @tinyplayerss

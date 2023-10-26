@@ -1,0 +1,10 @@
+button {
+    background-color: mediumpurple; /* Button background color */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #8430a3; /* Hover color */
+}

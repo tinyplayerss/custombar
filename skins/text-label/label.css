@@ -1,0 +1,16 @@
+.progress-label { /* 0 - 100 Ect */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.progress-label-start, .progress-label-end {
+    font-size: 50px;
+} 
+
+.progress-label-start {
+    left: 30px;
+}
+
+.progress-label-end {
+    right: 30px;
+}
