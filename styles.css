@@ -171,3 +171,18 @@ footer p {
 .download-button:hover {
   background-color: #1C1923;
 }
+
+.donationbutton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e9d44a;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.donationbutton:hover {
+  background-color: #1C1923;
+}
