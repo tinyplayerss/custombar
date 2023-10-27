@@ -186,3 +186,15 @@ footer p {
 .donationbutton:hover {
   background-color: #1C1923;
 }
+
+.story {
+  width: 100%; /* Set the section width to 100% of its parent container */
+  max-width: 800px;
+  margin: 0 auto; /* Remove margin for the section */
+  padding: 0; /* Remove padding for the section */
+  text-align: justify;
+  display: flex;
+  flex-direction: column; /* Arrange <p> elements in a column */
+  justify-content: space-between; /* Add space between <p> elements */
+  font-size: 20px;
+}
