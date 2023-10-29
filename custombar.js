@@ -9,8 +9,10 @@ const labelStart = document.getElementById('label-start');
 const labelEnd = document.getElementById('label-end');
 const labelStartInput = document.getElementById('label-start-input');
 const labelEndInput = document.getElementById('label-end-input');
+const updateRumbleApiKeyInput = document.getElementById('update-rumble-api-key-input');
 const updateLabelsButton = document.getElementById('update-labels-button');
 const updateTitleButton = document.getElementById('update-title-button');
+const updateRumbleApiKeyButton = document.getElementById('update-rumble-api-key-button');
 const saveValuesButton = document.getElementById('save-values-button');
 const loadValuesButton = document.getElementById('load-values-button');
 const loadValuesInput = document.getElementById('load-values-input');
@@ -40,6 +42,26 @@ function updateProgressBar(value) {
     labelEnd.style.color = 'white';
   }
 }
+
+// Function to get Rumble API data
+function getRumbleApi(value) {
+  fetch(`https://corsproxy.io/?${value}`).then(data => data.json())
+  .then(data => {
+    labelStart.textContent = data.followers.num_followers;
+    progressBar.style.width = (data.followers.num_followers / parseInt(goalInput.value)) * 100 + '%';
+    // progressInput.value = data.followers.num_followers;
+  })
+}
+// Event listener for updating Rumble API Key
+updateRumbleApiKeyButton.addEventListener('click', () => {
+  getRumbleApi(updateRumbleApiKeyInput.value)
+});
+// Timer to update num_followers
+setInterval(() => {
+  if (updateRumbleApiKeyInput.value.length > 48) {
+    getRumbleApi(updateRumbleApiKeyInput.value)
+  }
+}, 30000) // 30 seconds
 
 // Event listener for the increment button
 incrementButton.addEventListener('click', () => {
@@ -84,6 +106,7 @@ saveValuesButton.addEventListener('click', () => {
     title: document.getElementById('goal-title').textContent,
     labelStart: labelStart.textContent,
     labelEnd: labelEnd.textContent,
+    updateRumbleApiKeyInput: updateRumbleApiKeyInput.value,
   };
 
   const jsonData = JSON.stringify(valuesToSave);
@@ -119,6 +142,7 @@ loadValuesInput.addEventListener('change', () => {
       document.getElementById('goal-title').textContent = loadedValues.title;
       labelStart.textContent = loadedValues.labelStart;
       labelEnd.textContent = loadedValues.labelEnd;
+      updateRumbleApiKeyInput.value = loadedValues.updateRumbleApiKeyInput;
       updateProgressBar(loadedValues.progress);
     };
     reader.readAsText(file);

@@ -19,7 +19,8 @@ h3 {
 .progress-container {
   width: 70%;
   text-align: center;
-  margin-top: 20px; /* Adjust top margin as needed */
+  margin: 50px; /* Adjust top margin as needed */
+  padding-top: 200px;
 }
 
 .progress-bar {
@@ -54,6 +55,12 @@ h3 {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    border-radius: 10px;
+    background-color: #1f1f1f;
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 30px;
+    font-size: 18px;
 }
 
 .controls button,
@@ -63,6 +70,7 @@ h3 {
     border: none;
     padding: 10px 15px;
     border-radius: 15px;
+    width: 100px;
 }
 
 #load-values-input {
