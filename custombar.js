@@ -22,7 +22,6 @@ function updateProgressBar(value) {
   const newValue = Math.min(Math.max(value, 0), parseInt(goalInput.value));
   progressBar.style.width = (newValue / parseInt(goalInput.value)) * 100 + '%';
   progressInput.value = newValue;
-  labelStart.textContent = '0'; // Reset to 0
   labelEnd.textContent = '100'; // Reset to 100
 
   if (newValue === parseInt(goalInput.value)) {
@@ -92,7 +91,6 @@ updateTitleButton.addEventListener('click', () => {
 
 // Event listener for updating the labels
 updateLabelsButton.addEventListener('click', () => {
-  labelStart.textContent = labelStartInput.value;
   labelEnd.textContent = labelEndInput.value;
 });
 
