@@ -198,3 +198,12 @@ footer p {
   justify-content: space-between; /* Add space between <p> elements */
   font-size: 20px;
 }
+
+.updatebanner {
+  background-color: #6435a7;
+  box-shadow: 0px 0px 50px #6435a7;
+}
+
+.updatebanner > h1 {
+  color: #f76e9e;
+}
