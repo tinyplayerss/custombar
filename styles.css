@@ -207,3 +207,15 @@ footer p {
 .updatebanner > h1 {
   color: #f76e9e;
 }
+
+.redbanner {
+  background-color: rgb(255, 157, 0);
+  width: 1400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000000;
+  font-size: 14px;
+  justify-content: center;
+}
