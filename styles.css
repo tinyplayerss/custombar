@@ -61,6 +61,46 @@ nav {
   font-weight: bold;
 }
 
+.button {
+  scale: 1.3;
+}
+
+.button {
+  margin-left: 10px;
+  max-width: 200px;
+  background-color: transparent;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 18px;
+  border: 1px solid #ffffff;
+  transition: color 0.3s;
+  padding: 5px 15px 6px 15px;
+  scale: 1;
+}
+
+.button:hover {
+  color: #E94A64;
+  cursor: pointer;
+}
+
+.googleform {
+  margin-top: 0;
+  background-color: #003453;
+  width: 100%;
+  padding: 8px;
+  text-align: center;
+  justify-content: center;
+  border-top: 3px solid #002537;
+  border-bottom: 3px solid #002537;
+  font-size: 22px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
 nav ul {
   list-style: none;
 }
@@ -115,35 +155,6 @@ ul {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  background-color: #1C1923;
-  color: #D6D1E1;
-}
-
-form textarea {
-  height: 150px;
-}
-
-form button[type="submit"] {
-  padding: 10px 20px;
-  border: none;
-  background-color: #E94A64;
-  color: #D6D1E1;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-form button[type="submit"]:hover {
-  background-color: #1C1923;
 }
 
 footer {
