@@ -149,12 +149,13 @@ ul {
 
 .custombar-embed {
   display: flex;
-  scale: 0.7;
+  scale: 0.8;
   max-width: 800px;
-  max-height: 1200px;
+  height: 1200px;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
+  margin-top: -150px;
 }
 
 footer {
