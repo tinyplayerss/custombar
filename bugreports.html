@@ -1,124 +1,152 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Bug Report Form</title>
 
     <!-- Font Awesome Library -->
-    <script src="https://kit.fontawesome.com/739e3ae0dc.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/739e3ae0dc.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
-        body {
-            background-color: #2B2735;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+      body {
+        background-color: #2b2735;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
 
-        .container {
-            width: 600px;
-            max-width: 600px;
-            padding: 20px;
-            background-color: #1C1923;
-            border-radius: 10px;
-            box-sizing: border-box;
-            color: #fff;
-            box-shadow: 0px 2px 5px black;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+      .container {
+        width: 600px;
+        max-width: 600px;
+        padding: 20px;
+        background-color: #1c1923;
+        border-radius: 10px;
+        box-sizing: border-box;
+        color: #fff;
+        box-shadow: 0px 2px 5px black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-        h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
 
-        .input-container {
-            display: flex;
-            margin-bottom: 10px;
-        }
+      .input-container {
+        display: flex;
+        margin-bottom: 10px;
+      }
 
-        .email, .message {
-            background-color: #2B2735;
-            border-radius: 10px;
-            padding: 10px;
-            border: none;
-            color: #fff;
-            width: 100%;
-            border: 2px solid rgb(254, 52, 52);
-        }
+      .email,
+      .message {
+        background-color: #2b2735;
+        border-radius: 10px;
+        padding: 10px;
+        border: none;
+        color: #fff;
+        width: 100%;
+        border: 2px solid rgb(254, 52, 52);
+      }
 
-        .message {
-            height: 240px; /* Fixed height */
-            resize: none; /* Disable resizing */
-            max-width: 100%; /* Ensure it doesn't exceed the container's width */
-        }
+      .message {
+        height: 240px; /* Fixed height */
+        resize: none; /* Disable resizing */
+        max-width: 100%; /* Ensure it doesn't exceed the container's width */
+      }
 
-        .char-counter {
-            position: absolute;
-            bottom: 10px;
-            right: 30px;
-            bottom: 85px;
-            color: #68627a;
-            font-size: 20px;
-        }
+      .char-counter {
+        position: absolute;
+        bottom: 10px;
+        right: 30px;
+        bottom: 85px;
+        color: #68627a;
+        font-size: 20px;
+      }
 
-        .report-button {
-            background-color: transparent;
-            color: #fff;
-            border: 2px solid rgb(254, 52, 52);
-            border-radius: 10px 50px 50px 10px;
-            padding: 10px 20px;
-            font-size: 20px;
-            cursor: pointer;
-            width: 33%;
-            transition: width 0.3s ease;
-        }
+      .report-button {
+        background-color: transparent;
+        color: #fff;
+        border: 2px solid rgb(254, 52, 52);
+        border-radius: 10px 50px 50px 10px;
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        width: 33%;
+        transition: width 0.3s ease;
+      }
 
-        .report-button:hover {
-            width: 35%;
-        }
+      .report-button:hover {
+        width: 35%;
+      }
 
-        .email:only-of-type {
-            border: 2px solid rgb(254, 52, 52);
-            color: white;
-            font-size: 20px;
-        }
+      .email:only-of-type {
+        border: 2px solid rgb(254, 52, 52);
+        color: white;
+        font-size: 20px;
+      }
 
-        .header {
-            text-align: center;
-            color: #E94A64;
-            display: flex;
-            justify-content: center;
-            top: 500px;
-            background-color: #1C1923;
-        }
+      .header {
+        text-align: center;
+        color: #e94a64;
+        display: flex;
+        justify-content: center;
+        top: 500px;
+        background-color: #1c1923;
+      }
+
+      .backpage {
+        text-decoration: none;
+        color: #e94a64;
+      }
     </style>
-</head>
-<body>
-<header class="header"><h1>CustomBAR</h1></header>
-<div class="container">
-    <h2>Report a <i class="fa-solid fa-bug" style="color: #ff3838;"></i></h2>
-    <form action="https://formsubmit.co/2d0f755e91b8dba99d627a258576c7f6" method="post">
+  </head>
+  <body>
+    <header class="header">
+      <h1><a class="backpage" href="index.html">CustomBAR</a></h1>
+    </header>
+    <div class="container">
+      <h2>Report a <i class="fa-solid fa-bug" style="color: #ff3838"></i></h2>
+      <form
+        action="https://formsubmit.co/2d0f755e91b8dba99d627a258576c7f6"
+        method="post"
+      >
         <div class="input-container">
-            <input class="email" type="email" name="email" placeholder="Your Email Address">
+          <input
+            class="email"
+            type="email"
+            name="email"
+            placeholder="Your Email Address"
+          />
         </div>
         <div class="input-container">
-            <textarea class="message" name="message" rows="5" maxlength="1000" placeholder="Describe the issue in detail and provide steps to reproduce the bug"></textarea>
+          <textarea
+            class="message"
+            name="message"
+            rows="5"
+            maxlength="1000"
+            placeholder="Describe the issue in detail and provide steps to reproduce the bug"
+          ></textarea>
         </div>
         <div class="char-counter">0/1000</div>
-        <input type="hidden" name="_subject" value="BugReport">
-        <button class="report-button" type="submit"><i class="fa-regular fa-envelope" style="color: #ffffff;"></i> Report Bug</button>
-    </form>
-</div>
-<script>
-    const messageInput = document.querySelector('.message');
-    const charCounter = document.querySelector('.char-counter');
+        <input type="hidden" name="_subject" value="BugReport" />
+        <button class="report-button" type="submit">
+          <i class="fa-regular fa-envelope" style="color: #ffffff"></i> Report
+          Bug
+        </button>
+      </form>
+    </div>
+    <script>
+      const messageInput = document.querySelector(".message");
+      const charCounter = document.querySelector(".char-counter");
 
-    messageInput.addEventListener('input', () => {
+      messageInput.addEventListener("input", () => {
         const currentLength = messageInput.value.length;
         charCounter.textContent = `${currentLength}/1000`;
-    });
-</script>
-</body>
+      });
+    </script>
+  </body>
 </html>
