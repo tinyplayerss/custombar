@@ -37,7 +37,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #2B2735;
   color: #D6D1E1;
-  max-width: 80%;
+  max-width: 67%;
   margin: 0 auto;
   border-left: 5px solid #1b1820;
   border-right: 5px solid #1b1820;
@@ -46,6 +46,7 @@ body {
 header {
   background-color: #1C1923;
   padding: 20px;
+  border-radius: 0px 0px 20px 20px;
 }
 
 nav {
@@ -134,12 +135,12 @@ section {
   border-radius: 20px;
   margin: 20px;
   width: 100%;
-  max-width: 50%;
+  max-width: 80%;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
-  border: 2px solid white;
+  border: 1px solid white;
   box-shadow: 0px 5px 10px black;
 }
 
@@ -216,12 +217,11 @@ footer p {
 }
 
 .updatebanner {
-  background-color: #6435a7;
-  box-shadow: 0px 0px 50px #6435a7;
+  background-color: #000d25;
 }
 
 .updatebanner > h1 {
-  color: #f76e9e;
+  color: #ffd45e;
 }
 
 .redbanner {
@@ -236,6 +236,7 @@ footer p {
   font-size: 20px;
   justify-content: center;
   border: 1px solid rgb(255, 157, 0);
+  border-radius: 20px;
 }
 
 .donationbar {
@@ -259,24 +260,26 @@ footer p {
 }
 
 progress {
-  width: 80%;
-  height: 35px;
+  width: 70%;
+  height: 45px;
   border: none;
 }
 
 /* Background color of the progress element */
 progress::-webkit-progress-bar {
-  background-color: #2B2735; /* Darker background color */
-  border: 4px solid rgb(0, 0, 0);
+  background-color: transparent; /* Darker background color */
+  border: 3px solid white;
+  padding: 10px;
 }
 
 /* Fill color of the progress element */
 progress::-webkit-progress-value {
-  background-color: #e9c94a; /* Green fill color */
+  background-color: #ffffff; /* Green fill color */
+  box-shadow: 0px 0px 20px 5px rgb(252, 228, 93);
 }
 
 progress::-webkit-progress-bar, progress::-webkit-progress-value {
-    border-radius: 25px;
+    border-radius: 50px;
 }
 
 .money {
@@ -349,4 +352,12 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 20px;
+}
+
+.outsidebackground {
+  background-color: #121016;
+}
+
+.insidebackground {
+  background-color: #2B2735;
 }
