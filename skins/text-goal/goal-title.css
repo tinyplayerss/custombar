@@ -1,4 +1,7 @@
 #goal-title { /* Goal Title */
     content: "\f007";
-    color: rgb(231, 63, 105);
+    color: #58a6ff;
+    font-size: 45px;
+    text-shadow: 0px 0px 50px #58a6ff;
+    margin-top: 50px;
 }

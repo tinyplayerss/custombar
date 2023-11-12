@@ -18,10 +18,16 @@
       type="text/css"
       href="skins/progress-bar/bar-fill.css"
     />
+
+    <!-- Font Awesome Library -->
+    <script
+      src="https://kit.fontawesome.com/739e3ae0dc.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="progress-container">
-      <h2 id="goal-title">Goal</h2>
+      <h2 id="goal-title">Followers</h2>
       <div class="progress-bar">
         <span class="progress-label progress-label-start" id="label-start"
           >0</span
@@ -34,10 +40,37 @@
       <div class="divider"></div>
       <div class="controls">
         <table class="controls-table">
+          <h2 class="version">(Experiemental Skin)</h2>
+
+          <tr>
+            <td>
+              <div class="goal-controls">
+                <h3>
+                  <span class="text-display"
+                    ><i class="fa-solid fa-1" style="color: #ffffff"></i> Future
+                    Followers</span
+                  >
+                </h3>
+                <input
+                  type="number"
+                  id="goal-input"
+                  min="0"
+                  value="100"
+                  class="control-input"
+                />
+              </div>
+            </td>
+            <td></td>
+          </tr>
           <tr>
             <td>
               <div class="progress-controls">
-                <h3>Your Current Followers</h3>
+                <h3>
+                  <span class="text-display"
+                    ><i class="fa-solid fa-2" style="color: #ffffff"></i>
+                    Current Followers</span
+                  >
+                </h3>
                 <input
                   type="number"
                   id="progress-input"
@@ -53,25 +86,16 @@
               <button id="increment" class="control-button">+</button>
             </td>
           </tr>
-          <tr>
-            <td>
-              <div class="goal-controls">
-                <h3>Your Future Goal</h3>
-                <input
-                  type="number"
-                  id="goal-input"
-                  min="0"
-                  value="100"
-                  class="control-input"
-                />
-              </div>
-            </td>
-            <td></td>
-          </tr>
+
           <tr>
             <td>
               <div class="title-controls">
-                <h3>Title Above Bar</h3>
+                <h3>
+                  <span class="text-display"
+                    ><i class="fa-solid fa-3" style="color: #ffffff"></i> Goal
+                    Title</span
+                  >
+                </h3>
                 <input
                   type="text"
                   id="update-title-input"
@@ -89,7 +113,12 @@
           <tr>
             <td>
               <div class="labels-controls">
-                <h3>End Label</h3>
+                <h3>
+                  <span class="text-display"
+                    ><i class="fa-solid fa-4" style="color: #ffffff"></i> End
+                    Label</span
+                  >
+                </h3>
                 <input
                   type="text"
                   id="label-end-input"
@@ -107,7 +136,12 @@
           <tr>
             <td>
               <div class="rumble-api-key-controls">
-                <h3>Rumble API Key</h3>
+                <h3>
+                  <span class="text-display"
+                    ><i class="fa-solid fa-5" style="color: #ffffff"></i> Paste
+                    Rumble API</span
+                  >
+                </h3>
                 <input
                   type="text"
                   id="update-rumble-api-key-input"
@@ -125,7 +159,7 @@
           <tr>
             <td>
               <div class="save-load-controls">
-                <h3>Save & Load</h3>
+                <h3><span class="text-display">Save & Load</span></h3>
                 <input
                   type="file"
                   id="load-values-input"

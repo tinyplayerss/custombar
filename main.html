@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="CustomBAR" />
+    <meta
+      name="description"
+      content="CustomBAR: Dynamic progress bars, Rumble API, community skins, and volunteer-driven enhancements!"
+    />
+    <meta
+      name="keywords"
+      content="CustomBAR, progress bar, customization, animations, Rumble API, community skins, stable releases, streaming, volunteer, free open-source, Customizable Progress Bar, for streamers, track followers, track donations, track subscribers, track goals, track milestones"
+    />
+
+    <title>CustomBAR</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Font Awesome Library -->
+    <script
+      src="https://kit.fontawesome.com/739e3ae0dc.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      ::-webkit-scrollbar {
+        width: 0; /* Set the width of the scrollbar */
+        box-shadow: 0px 0px 20px black;
+      }
+
+      #progressbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 5px;
+        border-radius: 10px;
+        background-color: #58a6ff; /* Green fill color */
+        box-shadow: 0px 0px 25px #58a6ff;
+      }
+    </style>
+  </head>
+  <body class="outsidebackground">
+    <div id="progressbar"></div>
+    <div class="insidebackground">
+      <!-- The Start of the Page -->
+      <header>
+        <nav>
+          <div class="logo">CustomBAR</div>
+          <ul>
+            <li>
+              <a target="_blank" href="vulunteerform.html" class="button"
+                ><i
+                  class="fa-solid fa-hands-helping"
+                  style="color: #ffffff"
+                ></i>
+                Volunteer</a
+              >
+            </li>
+            <li>
+              <a target="_blank" href="bugreports.html" class="button"
+                ><i class="fa-solid fa-bug" style="color: #ffffff"></i> Report
+                Bugs</a
+              >
+            </li>
+            <li>
+              <a target="_blank" href="newsletter.html" class="button"
+                ><i class="fa-solid fa-newspaper" style="color: #ffffff"></i>
+                Newsletter</a
+              >
+            </li>
+            <li></li>
+          </ul>
+        </nav>
+        <nav class="redbanner">
+          <div>
+            We're addressing the End Label issue. Seeking volunteers with
+            JavaScript and HTML/CSS skills to assist with fixes and
+            improvements. Despite our size compared to established companies,
+            we're dedicated to resolving this issue.
+          </div>
+        </nav>
+      </header>
+
+      <section>
+        <h1 class="headerbackground">Welcome to CustomBAR</h1>
+        <p>
+          CustomBAR is a powerful and customizable progress bar project that
+          allows you to create visually stunning progress bars tailored to your
+          needs.
+        </p>
+      </section>
+
+      <section class="updatebanner">
+        <h1 class="headerbackground">CustomBAR v0.2.0 API BAR UPDATE OUT!</h1>
+        <p>
+          Rumble API Integration is now OUT! Thank you all Soo much for the
+          Great Feedback the Cheers and all Thank You Guys!
+        </p>
+      </section>
+
+      <section>
+        <h2 class="headerbackground">Key Features of CustomBAR</h2>
+        <ul>
+          <li>Unlimited customization options for color, size, and style</li>
+          <li>Smooth animation</li>
+          <li>Regularly Maintained</li>
+          <li>Made for Rumblers!</li>
+          <li>Cost: <span class="highlight-free">FREE!</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h1 class="headerbackground">Donations will go a long Way!</h1>
+        <div class="donationbar">
+          <h1>Donation Goal <span class="money">$1000</span></h1>
+          <progress max="1000" value="285"></progress>
+          <p>All New donations go towards a Streaming/Gaming PC!</p>
+          <a
+            target="_blank"
+            href="https://www.paypal.com/paypalme/2players1Gamer"
+            class="donationbutton"
+            ><i
+              class="fa-solid fa-hand-holding-dollar"
+              style="color: #ffffff"
+            ></i>
+            Donate!
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="headerbackground">Crediting is very Important!</h2>
+        <ul>
+          <li>
+            The Founder of CustomBAR
+            <a href="https://rumble.com/c/tinyplayerss"
+              ><span class="highlight-free">tinyplayerss</span></a
+            >
+          </li>
+          <li>
+            The Developer who helped with CustomBAR
+            <a href="https://rumble.com/c/GlobalGamer2015"
+              ><span class="highlight-free">GG2015</span></a
+            >
+          </li>
+          <li>
+            Who got me Started with CustomBAR
+            <a href="https://rumble.com/c/ElectricPorpoise"
+              ><span class="highlight-free">Electric Porpoise</span></a
+            >
+          </li>
+          <li>
+            Who saved and Contributed to CustomBAR!
+            <span class="highlight-free">Electric</span>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="headerbackground">CustomBAR Skins</h2>
+        <p>Community made skins will Appear here!</p>
+      </section>
+
+      <section>
+        <h2 class="headerbackground">Interactive Demo</h2>
+        <div class="custombar-embed">
+          <iframe
+            src="custombar.html"
+            style="scale: 1.3"
+            frameborder="0"
+            width="800"
+            height="1200"
+          ></iframe>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="headerbackground">
+          <span class="preview versioncontrol">Latest (Preview)</span>
+        </h2>
+
+        <divider class="divider-large"></divider>
+
+        <p>
+          Preview versions offer an early look at the evolving features and
+          functionalities of CustomBAR. While not finalized, these versions
+          allow for early user exploration and feedback, aiding in refining
+          upcoming iterations before stable release.
+        </p>
+
+        <divider class="divider-large"></divider>
+
+        <div class="downloadbackgrounds column">
+          <span class="preview versioncontrol versionstability"
+            ><i class="fab fa-github" style="color: #000000"></i>
+            <span class="version">v0.2.0</span>
+            <i class="fa-solid fa-chevron-right" style="color: #000000"></i>
+          </span>
+          <a href="https://tinyurl.com/ykldgcb4" class="download-button"
+            ><i class="fa-solid fa-cloud-arrow-down" style="color: #ffffff"></i>
+            Download CustomBAR</a
+          >
+        </div>
+      </section>
+
+      <section>
+        <h1 class="headerbackground">
+          <span class="versionstability versioncontrol">Stable (Releases)</span>
+        </h1>
+
+        <divider class="divider-large"></divider>
+
+        <p>
+          Stable releases represent meticulously tested and dependable versions
+          of CustomBAR. These iterations undergo rigorous quality assurance to
+          ensure reliability, minimal bugs, and consistent performance, making
+          them suitable for widespread use on Streams.
+        </p>
+
+        <divider class="divider-large"></divider>
+
+        <div class="column">
+          <span class="versioncontrol versionstability"
+            ><i class="fab fa-github" style="color: #000000"></i>
+            <span class="version">v0.1.3</span>
+            <i class="fa-solid fa-chevron-right" style="color: #000000"></i>
+          </span>
+          <a href="https://tinyurl.com/yrl56hlx" class="download-button"
+            ><i class="fa-solid fa-cloud-arrow-down" style="color: #ffffff"></i>
+            Download CustomBAR</a
+          >
+        </div>
+        <div class="column">
+          <span class="versioncontrol versionstability"
+            ><i class="fab fa-github" style="color: #000000"></i>
+            <span class="version">v0.1.2</span>
+            <i class="fa-solid fa-chevron-right" style="color: #000000"></i>
+          </span>
+          <a href="https://tinyurl.com/yoyvco32" class="download-button"
+            ><i class="fa-solid fa-cloud-arrow-down" style="color: #ffffff"></i>
+            Download CustomBAR</a
+          >
+        </div>
+        <div class="column">
+          <span class="versioncontrol versionstability"
+            ><i class="fab fa-github" style="color: #000000"></i>
+            <span class="version">v0.1.0</span>
+            <i class="fa-solid fa-chevron-right" style="color: #000000"></i>
+          </span>
+          <a href="https://tinyurl.com/yolxujel" class="download-button"
+            ><i class="fa-solid fa-cloud-arrow-down" style="color: #ffffff"></i>
+            Download CustomBAR</a
+          >
+        </div>
+      </section>
+
+      <section>
+        <h2 class="headerbackground">New in v0.2.0 - The API BAR Update!</h2>
+        <p>Our latest update makes use of the Rumble API! Enjoy!</p>
+      </section>
+
+      <footer>
+        <p>&copy; 2023 CustomBAR. All rights reserved.</p>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <script type="text/javascript">
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop(),
+            dh = $(document).height(),
+            wh = $(window).height();
+          var scrollPercent = (scroll / (dh - wh)) * 100;
+          $("#progressbar").css("height", scrollPercent + "%");
+        });
+
+        const sections = document.querySelectorAll(".section");
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+              observer.unobserve(entry.target);
+            }
+          });
+        });
+
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      </script>
+    </div>
+  </body>
+</html>
