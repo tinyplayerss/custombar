@@ -375,3 +375,22 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
   margin: 0 auto;
   margin: -50px 40px -50px 40px;
 }
+
+.credits {
+  display: grid;
+  grid-auto-flow: column;
+  scale: 0.7;
+}
+
+.profile {
+  border-radius: 100%;
+  border: 4px solid rgb(87, 153, 223);
+  transition: scale 0.3s, border 0.3s, box-shadow 0.3s;
+  padding: 8px;
+}
+
+.profile:hover {
+  scale: 1.08;
+  border: 4px solid rgb(130, 181, 235);
+  box-shadow: 0px 0px 20px rgb(87, 153, 223);
+}
