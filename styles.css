@@ -35,8 +35,16 @@ nav {
 .logo {
   font-size: 40px;
   font-weight: bold;
-  color: #58a6ff;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #4a9eff, #6378ff);
   text-align: center;
+}
+
+.logoglow {
+  text-shadow: 0px 0px 20px #fff25eab;
+  border-bottom: 3px solid #ffffff;
+  color: white;
 }
 
 .highlight-free {
