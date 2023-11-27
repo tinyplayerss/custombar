@@ -32,12 +32,8 @@ nav {
   align-items: center;
 }
 
-p {
-  font-size: 25px;
-}
-
 .logo {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   color: #58a6ff;
   text-align: center;
@@ -55,7 +51,7 @@ p {
   text-decoration: none;
   border-radius: 50px;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 8px;
   border: 1px solid #ffffff;
   transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
   padding: 5px 15px 6px 15px;
@@ -67,7 +63,6 @@ p {
   padding: 10px;
   text-decoration: none;
   border-radius: 50px;
-  font-size: 18px;
   border: 1px solid #ffffff;
   transition: color 0.3s, background-color 0.3s;
   padding: 5px 15px 6px 15px;
@@ -95,7 +90,6 @@ p {
   justify-content: center;
   border-top: 3px solid #002537;
   border-bottom: 3px solid #002537;
-  font-size: 22px;
   border-radius: 0px 0px 20px 20px;
   color: #c9d1d9;
 }
@@ -153,7 +147,6 @@ section > ul > li > a {
 section h1, section h2 {
   color: #c9d1d9;
   margin-bottom: 20px;
-  font-size: 35px;
 }
 
 section p {
@@ -166,7 +159,6 @@ ul {
   margin-left: 20px;
   margin-bottom: 20px;
   text-align: start;
-  font-size: 25px;
 }
 
 .custombar-embed {
@@ -196,7 +188,6 @@ footer p {
 }
 
 .download-button {
-  scale: 1.2;
   margin-left: 25px;
   display: inline-block;
   padding: 10px 20px;
@@ -224,7 +215,6 @@ footer p {
   display: flex;
   flex-direction: column; /* Arrange <p> elements in a column */
   justify-content: space-between; /* Add space between <p> elements */
-  font-size: 20px;
 }
 
 .updatebanner > h1 {
@@ -241,7 +231,6 @@ footer p {
   padding: 10px;
   border-radius: 10px;
   color: #ffffff;
-  font-size: 20px;
   justify-content: center;
   border: 1px solid rgb(255, 157, 0);
   border-radius: 20px;
@@ -255,11 +244,6 @@ footer p {
 .donationbar > p {
   margin-top: 20px;
   color: #c9d1d9;
-  font-size: 30px;
-}
-
-.donationbar > h1 {
-  font-size: 30px;
 }
 
 .donationbar > .donationbutton {
@@ -316,25 +300,22 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
 }
 
 .versioncontrol {
-  margin-top: 10px;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 11px;
   background-color: white;
   color: #000;
   text-decoration: none;
   font-weight: bold;
-  font-size: 21px;
   border-radius: 50px;
-  transition: color 0.3s ease;
-  max-width: fit-content;
 }
 
 .column {
   display: list-item;
-  margin-bottom: 30px;
   list-style-type: none;
+  margin: 10px;
 }
 
+/* Version Label */
 .versionstability {
   border-right: 20px solid rgb(140, 248, 126);
 }
@@ -352,7 +333,6 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
   max-width: fit-content;
   border: 1px solid white;
   border-radius: 50px;
-  font-size: 30px;
   text-shadow: 0px 0px 20px #d1054c;
 }
 
@@ -374,22 +354,24 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
   box-shadow: 0px 0px 1000px 10px #58a6ff4b;
 }
 
-.fa-github, .fa-cloud-arrow-down {
-  scale: 1.6;
-}
-
 .fa-cloud-arrow-down {
   margin-right: 10px;
 }
 
 .headerbackground {
+  justify-content: center;
   background-color: #1b2c41;
   padding: 10px;
-  position: relative;
-  width: 1200px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 0px 0px 20px 20px;
   box-shadow: 0px 5px 50px #141023;
+  border-radius: 20px;
+  font-size: large;
+  height: 40px;
+  align-items: center;
+}
+
+.downloadpage {
+  display: grid;
+  grid-auto-flow: column;
+  margin: 0 auto;
+  margin: -50px 40px -50px 40px;
 }
