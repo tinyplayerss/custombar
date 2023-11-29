@@ -13,17 +13,16 @@ html {
 body {
   font-family: Arial, sans-serif;
   color: #c9d1d9;
-  max-width: 67%;
+  width: 960px;
   min-width: 1000px;
   margin: 0 auto;
-  border-left: 2px solid #30363d;
-  border-right: 2px solid #30363d;
+  display: flex;
 }
 
 header {
-  background-color: #0d1117;
+  background-color: #061726;
   padding: 20px;
-  border-radius: 0px 0px 20px 20px;
+  height: 75px;
 }
 
 nav {
@@ -52,7 +51,7 @@ nav {
   border-radius: 50px;
   color: #ffffff;
   font-size: 8px;
-  border: 1px solid #ffffff;
+  border: 1px solid #85c742;
   transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
   padding: 5px 15px 6px 15px;
 }
@@ -63,7 +62,7 @@ nav {
   padding: 10px;
   text-decoration: none;
   border-radius: 50px;
-  border: 1px solid #ffffff;
+  border: 1px solid #85c742;
   transition: color 0.3s, background-color 0.3s;
   padding: 5px 15px 6px 15px;
 }
@@ -75,8 +74,8 @@ nav {
 
 .button:hover {
   color: black;
-  box-shadow: 0px 0px 20px #58a6ff;
-  background-color: #58a6ff;
+  box-shadow: 0px 0px 20px #85c742;
+  background-color: #85c742;
   cursor: pointer;
 }
 
@@ -128,7 +127,7 @@ nav ul li a:hover {
 
 section {
   padding: 30px;
-  background-color: #161b22;
+  background-color: #061726;
   border-radius: 20px;
   width: 100%;
   max-width: 80%;
@@ -136,7 +135,7 @@ section {
   margin-top: 40px;
   margin-bottom: 40px;
   text-align: center;
-  border: 1px solid #30363d;
+  border: 1px solid #85c742;
   overflow: hidden;
 }
 
@@ -177,10 +176,9 @@ footer, header {
 }
 
 footer {
-  background-color: #0d1117;
+  background-color: #061726;
   padding: 20px;
   text-align: center;
-  border-radius: 20px 20px 0px 0px;
 }
 
 footer p {
@@ -196,14 +194,14 @@ footer p {
   text-decoration: none;
   font-weight: bold;
   border-radius: 50px;
-  border: 1px solid #ffffff;
+  border: 1px solid #85c742;
   transition: background-color 0.3s, box-shadow 0.3s, color 0.3s ease;
 }
 
 .download-button:hover {
   color: black;
-  box-shadow: 0px 0px 20px #58a6ff;
-  background-color: #58a6ff;
+  box-shadow: 0px 0px 20px #85c742;
+  background-color: #85c742;
 }
 
 .story {
@@ -218,24 +216,37 @@ footer p {
 }
 
 .updatebanner > h1 {
-  color: #ffd45e;
-  text-shadow: 0px 0px 20px #ffd45e84;
+  color: #85c742;
+  text-shadow: 0px 0px 20px #85c742;
 }
 
-.redbanner {
-  background-color: transparent;
-  width: 100%;
-  max-width: fit-content;
-  margin: 0 auto;
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 10px;
-  color: #ffffff;
-  justify-content: center;
-  border: 1px solid rgb(255, 157, 0);
-  border-radius: 20px;
+.sliding-text-container {
   overflow: hidden;
+  white-space: nowrap;
+  max-width: 1000px; /* Set the maximum width */
+  margin: 0 auto; /* Center the container within the page */
+  background-color: rgb(214, 214, 214);
+  padding: 10px;
+  font-size: 15px;
+  color: black;
+  text-transform: uppercase;
 }
+
+.sliding-text {
+  display: inline-block;
+  animation: slide 45s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(64%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
 
 .donationbar {
   text-align: center;
@@ -267,8 +278,7 @@ progress::-webkit-progress-bar {
 
 /* Fill color of the progress element */
 progress::-webkit-progress-value {
-  background-color: #ffffff; /* Green fill color */
-  box-shadow: 0px 0px 20px 5px rgb(252, 228, 93);
+  background-color: #f23160; /* Green fill color */
 }
 
 progress::-webkit-progress-bar, progress::-webkit-progress-value {
@@ -276,7 +286,7 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
 }
 
 .money {
-    color: #e9c94a;
+    color: #f23160;
 }
 
 .donationbutton {
@@ -289,13 +299,13 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
   font-weight: bold;
   border-radius: 50px;
   transition: color 0.3s, color 0.3s, background-color 0.3s, box-shadow 0.3s ease;
-  border: 1px solid #ffffff;
+  border: 1px solid #85c742;
 }
 
 .donationbutton:hover {
   color: black;
-  background-color: #58a6ff;
-  box-shadow: 0px 0px 20px #58a6ff;
+  background-color: #85c742;
+  box-shadow: 0px 0px 20px #85c742;
   cursor: pointer;
 }
 
@@ -317,11 +327,11 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
 
 /* Version Label */
 .versionstability {
-  border-right: 20px solid rgb(140, 248, 126);
+  border-right: 20px solid #85c742;
 }
 
 .preview {
-  border-right: 20px solid rgb(255, 190, 105);
+  border-right: 20px solid rgb(233, 160, 65);
 }
 
 .version {
@@ -346,12 +356,15 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
 }
 
 .outsidebackground {
-  background-color: #121016;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #030614;
 }
 
 .insidebackground {
-  background-color: #0d1117;
-  box-shadow: 0px 0px 1000px 10px #58a6ff4b;
+  backdrop-filter: blur(25px);
+  background-color: #000312;
 }
 
 .fa-cloud-arrow-down {
@@ -373,7 +386,6 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
   display: grid;
   grid-auto-flow: column;
   margin: 0 auto;
-  margin: -50px 40px -50px 40px;
 }
 
 .credits {
@@ -384,7 +396,7 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
 
 .profile {
   border-radius: 100%;
-  border: 4px solid rgb(87, 153, 223);
+  border: 3px solid #85c742;
   transition: scale 0.3s, border 0.3s, box-shadow 0.3s;
   padding: 8px;
 }
@@ -393,4 +405,12 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
   scale: 1.08;
   border: 4px solid rgb(130, 181, 235);
   box-shadow: 0px 0px 20px rgb(87, 153, 223);
+}
+
+.twitter-tweet {
+  margin: 0 auto;
+}
+
+.twitterembed {
+  scale: 0.9;
 }
