@@ -22,7 +22,7 @@ body {
 header {
   background-color: #061726;
   padding: 20px;
-  height: 75px;
+  height: 90px;
 }
 
 nav {
@@ -31,51 +31,70 @@ nav {
   align-items: center;
 }
 
-.logo {
+.container-logo {
+  padding-bottom: 20px;
   font-size: 40px;
-  font-weight: bold;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.logo {
+  font-weight: bolder;
   color: #58a6ff;
   text-align: center;
 }
 
+.barglow {
+  text-shadow: 0px 0px 20px #58a6ff7c;
+}
+
 .highlight-free {
-  color: #58a6ff;
+  color: #f23160;
   font-weight: bold;
 }
 
+.startstyle {
+  border-radius: 20px 0px 0px 20px;
+}
+
+.middlestyle {
+  border-radius: 0px;
+}
+
+.endstyle {
+  border-radius: 0px 20px 20px 0px;
+}
+
 .button {
-  margin: 25px;
   max-width: 180px;
-  padding: 5px;
-  text-decoration: none;
-  border-radius: 50px;
   color: #ffffff;
   font-size: 8px;
-  border: 1px solid #85c742;
-  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
-  padding: 5px 15px 6px 15px;
+  padding: 10px 15px;
+  background-color: #071f34;
+  margin-right: 15px;
+}
+
+.fontsize {
+  font-size: 12px;
 }
 
 .volunteerbutton {
   max-width: 200px;
-  background-color: transparent;
   padding: 10px;
   text-decoration: none;
   border-radius: 50px;
   border: 1px solid #85c742;
-  transition: color 0.3s, background-color 0.3s;
   padding: 5px 15px 6px 15px;
 }
 
 .volunteerbutton:hover {
   color: rgb(255, 255, 255);
-  background-color: rgb(10, 31, 48);
 }
 
 .button:hover {
-  color: black;
-  box-shadow: 0px 0px 20px #85c742;
-  background-color: #85c742;
+  background-color: #042f55;
   cursor: pointer;
 }
 
@@ -121,31 +140,26 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #E94A64;
-}
-
 section {
   padding: 30px;
-  background-color: #061726;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 80%;
+  background-color: #011527;
+  border-radius: 10px;
   margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
   text-align: center;
-  border: 1px solid #85c742;
   overflow: hidden;
+  margin-top: 13px;
+  margin-bottom: 13px;
 }
 
 section > ul > li > a {
   text-decoration: none;
+  font-size: 12px;
+  margin-bottom: 20px;
 }
 
-section h1, section h2 {
-  color: #c9d1d9;
-  margin-bottom: 20px;
+section h2 {
+  margin-bottom: 40px;
+  text-align: left;
 }
 
 section p {
@@ -179,29 +193,32 @@ footer {
   background-color: #061726;
   padding: 20px;
   text-align: center;
+  border-radius: 10px 10px 0px 0px;
 }
 
 footer p {
   font-size: 14px;
 }
 
+.aka {
+  padding: 8px 12px;
+  background-color: #002537;
+  border-radius: 20px;
+}
+
 .download-button {
   margin-left: 25px;
   display: inline-block;
   padding: 10px 20px;
-  background-color: transparent;
+  background-color: #071f34;
   color: #D6D1E1;
   text-decoration: none;
   font-weight: bold;
   border-radius: 50px;
-  border: 1px solid #85c742;
-  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s ease;
 }
 
 .download-button:hover {
-  color: black;
-  box-shadow: 0px 0px 20px #85c742;
-  background-color: #85c742;
+  background-color: #042f55;
 }
 
 .story {
@@ -225,11 +242,13 @@ footer p {
   white-space: nowrap;
   max-width: 1000px; /* Set the maximum width */
   margin: 0 auto; /* Center the container within the page */
-  background-color: rgb(214, 214, 214);
+  background-color: #071f34;
   padding: 10px;
   font-size: 15px;
-  color: black;
+  color: rgba(255, 255, 255, 0.65);
   text-transform: uppercase;
+  font-weight: bolder;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .sliding-text {
@@ -246,7 +265,9 @@ footer p {
   }
 }
 
-
+.goaltitlesize {
+  font-size: 28px;
+}
 
 .donationbar {
   text-align: center;
@@ -261,6 +282,7 @@ footer p {
   margin-top: 20px;
   scale: 1.3;
   width: 200px;
+  background-color: #071f34;
 }
 
 progress {
@@ -272,7 +294,7 @@ progress {
 /* Background color of the progress element */
 progress::-webkit-progress-bar {
   background-color: transparent; /* Darker background color */
-  border: 3px solid white;
+  border: 2px solid white;
   padding: 10px;
 }
 
@@ -298,14 +320,10 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
   text-decoration: none;
   font-weight: bold;
   border-radius: 50px;
-  transition: color 0.3s, color 0.3s, background-color 0.3s, box-shadow 0.3s ease;
-  border: 1px solid #85c742;
 }
 
 .donationbutton:hover {
-  color: black;
-  background-color: #85c742;
-  box-shadow: 0px 0px 20px #85c742;
+  background-color: #042f55;
   cursor: pointer;
 }
 
@@ -364,28 +382,28 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
 
 .insidebackground {
   backdrop-filter: blur(25px);
-  background-color: #000312;
 }
 
 .fa-cloud-arrow-down {
   margin-right: 10px;
 }
 
-.headerbackground {
-  justify-content: center;
-  background-color: #1b2c41;
-  padding: 10px;
-  box-shadow: 0px 5px 50px #141023;
-  border-radius: 20px;
-  font-size: large;
-  height: 40px;
-  align-items: center;
+.underlineh2 {
+  border-bottom: 3px solid #f23160;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.centertext {
+  text-align: center;
 }
 
 .downloadpage {
   display: grid;
   grid-auto-flow: column;
   margin: 0 auto;
+  grid-gap: 20px;
 }
 
 .credits {
@@ -403,12 +421,14 @@ progress::-webkit-progress-bar, progress::-webkit-progress-value {
 
 .profile:hover {
   scale: 1.08;
-  border: 4px solid rgb(130, 181, 235);
-  box-shadow: 0px 0px 20px rgb(87, 153, 223);
+  border: 4px solid #f23160;
+  box-shadow: 0px 0px 20px #f23160;
 }
 
 .twitter-tweet {
   margin: 0 auto;
+  box-shadow: 0px 8px 30px black;
+  border-radius: 10px;
 }
 
 .twitterembed {
