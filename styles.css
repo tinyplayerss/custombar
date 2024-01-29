@@ -291,20 +291,30 @@ progress {
   border: none;
 }
 
-/* Background color of the progress element */
+/* Chrome */
 progress::-webkit-progress-bar {
   background-color: transparent; /* Darker background color */
   border: 2px solid white;
   padding: 10px;
+  border-radius: 50px;
 }
 
-/* Fill color of the progress element */
 progress::-webkit-progress-value {
   background-color: #f23160; /* Green fill color */
+  border-radius: 50px;
 }
 
-progress::-webkit-progress-bar, progress::-webkit-progress-value {
-    border-radius: 50px;
+/* Firefox */
+progress::-moz-progress-bar {
+  background-color: #f23160; /* Green fill color */
+  border-radius: 50px;
+}
+
+progress {
+  background-color: transparent; /* Darker background color */
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 50px;
 }
 
 .money {

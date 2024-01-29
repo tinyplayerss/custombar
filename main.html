@@ -30,9 +30,14 @@
         box-sizing: border-box;
       }
 
+      /* Chrome, Edge, and Safari */
       ::-webkit-scrollbar {
-        width: 0; /* Set the width of the scrollbar */
-        box-shadow: 0px 0px 20px black;
+        width: 0; /* Hide scrollbar */
+      }
+
+      /* Firefox */
+      * {
+        scrollbar-width: none; /* Hide scrollbar */
       }
 
       #progressbar {
@@ -45,6 +50,7 @@
         box-shadow: 0px 0px 25px #58a6ff;
       }
     </style>
+
   </head>
   <body class="outsidebackground">
     <div id="progressbar"></div>
@@ -158,9 +164,9 @@
           <span class="underlineh2">Donations will go a long Way!</span>
         </h2>
         <div class="donationbar">
-          <h1 class="goaltitlesize">
+          <h3 class="goaltitlesize">
             Donation Goal <span class="money">$1000</span>
-          </h1>
+          </h3>
           <progress max="1000" value="432"></progress>
           <!-- Set the Donation Amount -->
           <p>All New donations go towards a Streaming/Gaming PC!</p>
@@ -168,7 +174,8 @@
             target="_blank"
             href="https://www.paypal.com/paypalme/2players1Gamer"
             class="donationbutton"
-            ><i class="fa-solid fa-hand-holding-dollar"></i>
+            >
+            <i class="fas fa-hand-holding-usd"></i>
             Donate!
           </a>
         </div>
