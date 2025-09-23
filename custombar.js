@@ -42,25 +42,61 @@ function updateProgressBar(value) {
   }
 }
 
-// Function to get Rumble API data
+// Optimized Rumble API function with caching and error handling
+let apiCache = {};
+let apiTimeout;
+
 function getRumbleApi(value) {
-  fetch(`https://corsproxy.io/?${value}`).then(data => data.json())
-  .then(data => {
+  // Cache check
+  if (apiCache[value] && Date.now() - apiCache[value].timestamp < 30000) {
+    const data = apiCache[value].data;
     labelStart.textContent = data.followers.num_followers;
     progressBar.style.width = (data.followers.num_followers / parseInt(goalInput.value)) * 100 + '%';
-    // progressInput.value = data.followers.num_followers;
-  })
+    return;
+  }
+
+  fetch(`https://corsproxy.io/?${value}`)
+    .then(response => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.json();
+    })
+    .then(data => {
+      // Cache the result
+      apiCache[value] = {
+        data: data,
+        timestamp: Date.now()
+      };
+      
+      labelStart.textContent = data.followers.num_followers;
+      progressBar.style.width = (data.followers.num_followers / parseInt(goalInput.value)) * 100 + '%';
+    })
+    .catch(error => {
+      console.error('Rumble API error:', error);
+    });
 }
+
+// Debounced API update function
+const debouncedApiUpdate = (value) => {
+  clearTimeout(apiTimeout);
+  apiTimeout = setTimeout(() => {
+    if (value.length > 48) {
+      getRumbleApi(value);
+    }
+  }, 1000);
+};
+
 // Event listener for updating Rumble API Key
 updateRumbleApiKeyButton.addEventListener('click', () => {
-  getRumbleApi(updateRumbleApiKeyInput.value)
+  getRumbleApi(updateRumbleApiKeyInput.value);
 });
-// Timer to update num_followers
+
+// Optimized timer for API updates
 setInterval(() => {
-  if (updateRumbleApiKeyInput.value.length > 48) {
-    getRumbleApi(updateRumbleApiKeyInput.value)
+  const apiValue = updateRumbleApiKeyInput.value;
+  if (apiValue.length > 48) {
+    getRumbleApi(apiValue);
   }
-}, 30000) // 30 seconds
+}, 30000); // 30 seconds
 
 // Event listener for the increment button
 incrementButton.addEventListener('click', () => {
@@ -96,7 +132,31 @@ updateLabelsButton.addEventListener('click', () => {
 
 // ...
 
-// Event listener for saving values to JSON
+// Optimized save/load functionality with debouncing
+let saveTimeout;
+const debouncedSave = () => {
+  clearTimeout(saveTimeout);
+  saveTimeout = setTimeout(() => {
+    const valuesToSave = {
+      progress: progressInput.value,
+      goal: goalInput.value,
+      title: document.getElementById('goal-title').textContent,
+      labelStart: labelStart.textContent,
+      labelEnd: labelEnd.textContent,
+      updateRumbleApiKeyInput: updateRumbleApiKeyInput.value,
+    };
+    
+    const jsonData = JSON.stringify(valuesToSave);
+    localStorage.setItem('progressData', jsonData);
+    
+    // OBS Studio integration
+    if (window.obsstudio) {
+      window.obsstudio.saveData(jsonData);
+    }
+  }, 300);
+};
+
+// Event listener for saving values
 saveValuesButton.addEventListener('click', () => {
   const valuesToSave = {
     progress: progressInput.value,
@@ -109,83 +169,50 @@ saveValuesButton.addEventListener('click', () => {
 
   const jsonData = JSON.stringify(valuesToSave);
 
-  // Create a data URI and trigger a download
+  // Create download
   const blob = new Blob([jsonData], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
-
   const a = document.createElement('a');
   a.href = url;
   a.download = 'values.json';
-
-  // Programmatically click the hidden "a" element
   a.click();
-
   URL.revokeObjectURL(url);
+
+  // Also save to localStorage
+  localStorage.setItem('progressData', jsonData);
+  if (window.obsstudio) {
+    window.obsstudio.saveData(jsonData);
+  }
 });
 
-// Event listener for loading values from a JSON file
+// Event listener for loading values from file
 loadValuesButton.addEventListener('click', () => {
-  loadValuesInput.click(); // Trigger the file input
+  loadValuesInput.click();
 });
 
-// Event listener for handling the selected JSON file
+// Handle file selection
 loadValuesInput.addEventListener('change', () => {
   const file = loadValuesInput.files[0];
   if (file) {
     const reader = new FileReader();
     reader.onload = function (event) {
-      const loadedValues = JSON.parse(event.target.result);
-      progressInput.value = loadedValues.progress;
-      goalInput.value = loadedValues.goal;
-      document.getElementById('goal-title').textContent = loadedValues.title;
-      labelStart.textContent = loadedValues.labelStart;
-      labelEnd.textContent = loadedValues.labelEnd;
-      updateRumbleApiKeyInput.value = loadedValues.updateRumbleApiKeyInput;
-      updateProgressBar(loadedValues.progress);
+      try {
+        const loadedValues = JSON.parse(event.target.result);
+        progressInput.value = loadedValues.progress || 0;
+        goalInput.value = loadedValues.goal || 100;
+        document.getElementById('goal-title').textContent = loadedValues.title || 'Goal';
+        labelStart.textContent = loadedValues.labelStart || '0';
+        labelEnd.textContent = loadedValues.labelEnd || '100';
+        updateRumbleApiKeyInput.value = loadedValues.updateRumbleApiKeyInput || '';
+        updateProgressBar(parseInt(loadedValues.progress) || 0);
+      } catch (e) {
+        console.error('Error parsing JSON file:', e);
+      }
     };
     reader.readAsText(file);
   }
 });
 
-// Add an event listener for saving values to JSON
-saveValuesButton.addEventListener('click', () => {
-    const valuesToSave = {
-        progress: progressInput.value,
-        goal: goalInput.value,
-        title: document.getElementById('goal-title').textContent,
-        labelStart: labelStart.textContent,
-        labelEnd: labelEnd.textContent,
-    };
-
-    const jsonData = JSON.stringify(valuesToSave);
-
-    // Instead of saving to a file, you can use `localStorage` to store data locally.
-    localStorage.setItem('progressData', jsonData);
-    // Notify OBS Studio via JavaScript that data is saved
-    if (window.obsstudio) {
-        window.obsstudio.saveData(jsonData);
-    }
-});
-
-// Event listener for loading values from a JSON file (if allowed in OBS browser source)
-loadValuesButton.addEventListener('click', () => {
-    // Instead of loading from a file, try to retrieve data from `localStorage`.
-    const jsonData = localStorage.getItem('progressData');
-    if (jsonData) {
-        const loadedValues = JSON.parse(jsonData);
-        progressInput.value = loadedValues.progress;
-        goalInput.value = loadedValues.goal;
-        document.getElementById('goal-title').textContent = loadedValues.title;
-        labelStart.textContent = loadedValues.labelStart;
-        labelEnd.textContent = loadedValues.labelEnd;
-        updateProgressBar(loadedValues.progress);
-        // Notify OBS Studio via JavaScript that data is loaded
-        if (window.obsstudio) {
-            window.obsstudio.loadData(jsonData);
-        }
-    }
-});
-
 // Initial setup
-updateProgressBar(parseInt(progressInput.value));
+updateProgressBar(parseInt(progressInput.value) || 0);
 

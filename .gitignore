@@ -1,0 +1,17 @@
+# Build artifacts
+node_modules/
+dist/
+.cache/
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log

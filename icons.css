@@ -1,0 +1,60 @@
+/* Lightweight CSS-only icon alternatives to replace Font Awesome */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+/* Bug icon */
+.icon-bug::before {
+  content: "🐛";
+}
+
+/* Envelope icon */
+.icon-envelope::before {
+  content: "✉";
+}
+
+/* Hands helping icon */
+.icon-hands-helping::before {
+  content: "🤝";
+}
+
+/* Newspaper icon */
+.icon-newspaper::before {
+  content: "📰";
+}
+
+/* GitHub icon */
+.icon-github::before {
+  content: "⚡";
+}
+
+/* Download icon */
+.icon-download::before {
+  content: "⬇";
+}
+
+/* Dollar/donation icon */
+.icon-dollar::before {
+  content: "💰";
+}
+
+/* Chevron right */
+.icon-chevron-right::before {
+  content: "›";
+  font-weight: bold;
+}
+
+/* Circle bullet */
+.icon-circle::before {
+  content: "•";
+}
+
+/* Generic solid style for compatibility */
+.fa-solid, .fas, .fa-regular {
+  font-style: normal;
+  font-weight: normal;
+}
