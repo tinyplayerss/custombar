@@ -3,11 +3,8 @@
   <head>
     <title>Bug Report Form</title>
 
-    <!-- Font Awesome Library -->
-    <script
-      src="https://kit.fontawesome.com/739e3ae0dc.js"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Lightweight local icons -->
+    <link rel="stylesheet" href="icons.css" />
     <style>
       body {
         background-color: #2b2735;
@@ -109,7 +106,7 @@
       <h1><a class="backpage" href="index.html">CustomBAR</a></h1>
     </header>
     <div class="container">
-      <h2>Report a <i class="fa-solid fa-bug" style="color: #ff3838"></i></h2>
+      <h2>Report a <span class="icon icon-bug" style="color: #ff3838"></span></h2>
       <form
         action="https://formsubmit.co/2d0f755e91b8dba99d627a258576c7f6"
         method="post"
@@ -134,7 +131,7 @@
         <div class="char-counter">0/1000</div>
         <input type="hidden" name="_subject" value="BugReport" />
         <button class="report-button" type="submit">
-          <i class="fa-regular fa-envelope" style="color: #ffffff"></i> Report
+          <span class="icon icon-envelope" style="color: #ffffff"></span> Report
           Bug
         </button>
       </form>

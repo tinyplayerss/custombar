@@ -5,6 +5,27 @@
   box-sizing: border-box;
 }
 
+/* Hide scrollbar in WebKit browsers */
+::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar */
+}
+
+/* Hide scrollbar in Firefox */
+* {
+  scrollbar-width: none; /* Hide scrollbar */
+}
+
+/* Progress bar on right side */
+#progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 5px;
+  border-radius: 10px;
+  background-color: #58a6ff;
+  box-shadow: 0px 0px 25px #58a6ff;
+}
+
 html {
   scroll-behavior: smooth;
 }
